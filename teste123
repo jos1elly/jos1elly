@@ -1,0 +1,33 @@
+import flet as ft
+
+def main (page: ft.Page):
+    page.window_center()
+    page.bgcolor = '#120F26'
+    page.window_width = '1000'
+    page.window_height = '600'
+
+    r1= ft.Row([
+        ft.Container(
+        bgcolor='#ffffff',
+        width=450,
+        height=540,
+        border_radius= 5,
+        padding=30,
+        content= ft.Column ([  
+
+        ft.Text("Faça seu  Login", size = 35),
+        ft.TextField(label ='E-mail', icon= ft.icons.ACCOUNT_BOX),
+        ft.TextField(label ='Senha', icon= ft.icons.ACCOUNT_BOX),
+        
+       ],alignment=ft.MainAxisAlignment.CENTER,
+       horizontal_alignment=ft.CrossAxisAlignment.CENTER
+       ) 
+       ),
+
+       ft.Image (src=f'engenheiro-de-computacao.png')
+     ])
+
+
+     
+    page.add(r1)
+ft.app(target=main)
